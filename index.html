@@ -116,7 +116,7 @@
     });
 
     // realtime listener: updates the list when the collection changes
-    update_people_li(){
+    function update_people_li(){
         const q = query(peopleCol, orderBy('createdAt'));
         onSnapshot(q, (snapshot) => {
         peopleList.innerHTML = '';
@@ -128,14 +128,14 @@
         });
     }
     update_people_li()
-    
+
     document.getElementById("nextBtn").addEventListener("click", function() {
         document.getElementById("entry").style.display = "none";
         document.getElementById("main").style.display = "block";
     });
     
 
-    const main_questions = getElementById('main_questions');
+    const main_questions = document.getElementById('main_questions');
     const form_question = document.getElementById('questions-form');
     const questionInput = document.getElementById('questions-input');
 
